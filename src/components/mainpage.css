@@ -24,7 +24,7 @@
 
 .maincontent {
     display: flex;
-    padding: 10%;
+    padding: 5%;
     padding-left: 0;
     padding-bottom: 0;
     gap: 15%;
@@ -32,10 +32,10 @@
 }
 
 .maincontent>h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold;
-    width: 40%;
-    font-family: 'DRAGON HUNTER';
+    width: 35%;
+    font-family: 'Bangers';
 }
 
 
