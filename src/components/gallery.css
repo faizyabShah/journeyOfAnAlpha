@@ -21,14 +21,14 @@
 .intro .start {
     display: flex;
     gap: 15px;
-    font-size: 4rem;
+    font-size: 8vh;
     font-family: 'Bangers';
 }
 
 .intro .end {
     display: flex;
     gap: 15px;
-    max-height: 50px;
+    max-height: 6vh;
 }
 
 .intro .end button {
@@ -37,7 +37,7 @@
     border-radius: 5px;
     min-width: 150px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 2vh;
     color:rgb(196, 75, 214,1);
 }
 
@@ -56,7 +56,7 @@
 
 .image-list {
     display: flex;
-    height: 100%;
+    height: 50vh;
     width: calc(100% * 6 / 3);
     max-width: 100%;
     align-items: center;
@@ -70,8 +70,8 @@
 }
 
 .image-item img, .image-item video {
-    width: 512px;
-    height: 288px;
+    width: 64vh;
+    height: 36vh;
     padding: 3%;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.6);
