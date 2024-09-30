@@ -1,0 +1,211 @@
+.navbar {
+    height: 100vh;
+    width: 5%;
+    background: rgb(196, 75, 214,1);
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    box-shadow: 5px 0 5px rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    font-family: 'DRAGON HUNTER';
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+}
+
+.navbar > .nav-header {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.navbar > .nav-header:hover {
+    cursor: pointer;
+    color: white; 
+}
+
+.navbar > .nav-item {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.navbar > .nav-item:hover {
+    cursor: pointer;
+}
+
+.navbar > .nav-item::after {
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(196, 75, 214,1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    transition: top 0.3s ease;
+}
+
+.navbar > .nav-item:hover::after {
+    top: 0;
+}
+
+.navbar > .nav-item:hover {
+    color: transparent;
+}
+
+.side-menu {
+    height: 100vh;
+    width: 20%;
+    background: rgb(196, 75, 214,1);
+    position: fixed;
+    top: 0;
+    left: -20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    box-shadow: 5px 0 5px rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    font-family: 'Raleway';
+    font-weight: bold;
+    overflow: hidden;
+    transition: left 0.1s ease;
+    z-index: 0;
+    height: 100vh;
+}
+
+.side-menu-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5% 0 30%;
+}
+
+.side-menu.open {
+    left: 5%;
+}
+
+.side-menu-header, .side-menu-item {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.side-menu.open .side-menu-header, 
+.side-menu.open .side-menu-item {
+    transform: translateX(0);
+}
+
+.side-menu-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.side-menu {
+    height: 100vh;
+    width: 20%;
+    background: rgb(196, 75, 214, 1);
+    position: fixed;
+    top: 0;
+    left: -20%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center; /* Center them vertically */
+    box-shadow: 5px 0 5px rgba(255, 255, 255, 0.3);
+    font-family: 'Raleway';
+    
+    font-weight: bold;
+    overflow: hidden;
+    transition: left 0.1s ease;
+    z-index: 1;
+}
+
+/* Spacing between menu items */
+.side-menu-header, .side-menu-item {
+    margin-bottom: 20px; /* Add spacing between items */
+}
+
+.side-menu-item {
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+}
+
+/* For the previous text (visible initially in black) */
+.side-menu-item::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    transition: top 0.2s ease;
+}
+
+/* For the new text (hidden initially, white on hover) */
+.side-menu-item::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    transition: top 0.2s ease;
+}
+
+.side-menu-item:hover::after {
+    top: -100%;
+}
+
+.side-menu-item:hover::before {
+    top: 0;
+}
+
+/* Ensure the main item at the top has larger font size */
+.side-menu-item-main {
+    font-size: 2rem;
+    margin-top: 5%;
+}
+
+.side-menu-item-main:hover {
+    cursor: pointer;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    align-items: space-between;
+    justify-content: space-around;
+}
+
+.top {
+    display: flex;
+    height: 50px;
+}
